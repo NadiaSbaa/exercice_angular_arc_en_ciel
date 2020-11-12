@@ -13,6 +13,7 @@ import { ListComponent } from './cv/components/list/list.component';
 import { RandomStringPipe } from './pipes/random-string.pipe';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { TodoComponent } from './todo/todo/todo.component';
+import { ArcEnCielComponent } from './arcEnCiel/arc-en-ciel/arc-en-ciel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TodoComponent } from './todo/todo/todo.component';
     ListComponent,
     RandomStringPipe,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    ArcEnCielComponent
   ],
   imports: [
     BrowserModule,
