@@ -7,6 +7,10 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 export class ArcEnCielDirective {
 
   constructor() { }
+  /*
+  Quel propriétés ciblier : @HostBinding
+  Quel event génrer : @HostListener
+  */
   @HostBinding('style.color') c = 'black';
   @HostBinding('style.borderColor') bc = 'black';
   @HostBinding('style.borderWidth') bw = 'thick';

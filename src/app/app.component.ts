@@ -1,3 +1,4 @@
+import { LoggerService } from './services/logger.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private loggerService: LoggerService){
+  this.loggerService.logger('Je suis le APP component');
+  }
   title = 'testProject';
 }
