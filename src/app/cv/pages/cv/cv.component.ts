@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvComponent implements OnInit {
   selectedPersonne: Personne;
+  personnesOffiEmbauches: Personne[] = [] ;
+  personnesem = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,5 +17,10 @@ export class CvComponent implements OnInit {
 
   catchSelectedPersonne(forwardedPersonne: Personne): void{
     this.selectedPersonne = forwardedPersonne;
+  }
+  catchPersonnesEmbauches(personnesEmbauches: Personne[]): void{
+    this.personnesOffiEmbauches = personnesEmbauches;
+    console.log(this.personnesOffiEmbauches);
+    this.personnesem = true;
   }
 }

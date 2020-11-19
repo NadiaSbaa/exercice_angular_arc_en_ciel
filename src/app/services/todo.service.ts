@@ -1,3 +1,4 @@
+import { LoggerService } from './logger.service';
 import { Todo } from './../todo/model/todo';
 import { Injectable } from '@angular/core';
 import { ThrowStmt } from '@angular/compiler';
@@ -7,7 +8,7 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class TodoService {
   todos: Todo[] = [];
-  constructor() { }
+  constructor(private loggerService: LoggerService) { }
 
   getIndexToDoFromId(id: number): number{
     for ( let i = 0 ; i < this.todos.length ; i ++){
@@ -24,8 +25,9 @@ export class TodoService {
     return this.todos;
   }
 
-  loggerTodo(id: number): void{
-    console.log(this.todos[this.getIndexToDoFromId(id)]);
+  loggerTodo(): void{
+    this.loggerService.logger(this.todos)
+
   }
 
   deleteTodo(id: number): void{
